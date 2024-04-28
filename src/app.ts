@@ -5,6 +5,7 @@ import { AdminRoutes } from "./app/modules/admin/router.admin";
 import router from "./app/routes";
 import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
+import cookieParser from "cookie-parser";
 
 const app: Application = express();
 
@@ -12,6 +13,10 @@ app.use(cors());
 
 // parse
 app.use(express.json());
+app.use(cookieParser());
+
+//use
+
 app.use(
   express.urlencoded({
     extended: true,
