@@ -1,0 +1,30 @@
+// create doctor
+
+{
+  "password": 123456,
+  "doctor": {
+    "name": "Doctor's Name",
+    "email": "doctor@example.com",
+    "contactNumber": "1234567890",
+    "address": "Doctor's Address (optional)",
+    "registrationNumber": "12345",
+    "experience": 5,   
+    "gender": "MALE",  
+    "appointmentFee": 50,  
+    "qualification": "Doctor's Qualification",
+    "currentWorkingPlace": "Current Working Place",
+    "designation": "Doctor's Designation"
+  }
+},
+
+// create patient
+
+{
+  "password": "123456",
+  "patient": {
+    "email": "patient@example.com",
+    "name": "Patient's Name",
+    "contactNumber": "1234567890",
+    "address": "Patient's Address"
+  }
+}
