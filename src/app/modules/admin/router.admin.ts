@@ -22,11 +22,14 @@ router.patch(
   AdminController.updateIntoDB
 );
 
+// delete admin
 router.delete(
   "/:id",
   auth(UserRole.SUPER_ADMIN, UserRole.ADMIN),
   AdminController.deleteFromDB
 );
+
+// soft delete admin
 
 router.delete(
   "/soft/:id",
