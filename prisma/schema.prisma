@@ -150,8 +150,8 @@ model Schedule {
   endDateTime     DateTime
   createdAt       DateTime          @default(now())
   updatedAt       DateTime          @updatedAt
-
   doctorSchedules DoctorSchedules[]
+
   @@map("schedules")
 }
 
@@ -162,7 +162,7 @@ model DoctorSchedules {
   scheduleId String
   schedule   Schedule @relation(fields: [scheduleId], references: [id])
 
-  isBooked Boolean
+  isBooked Boolean @default(false)
 
   appointmentId String?
 
@@ -178,8 +178,8 @@ enum UserRole {
 }
 
 enum UserStatus {
-  BLOCKED
   ACTIVE
+  BLOCKED
   DELETED
 }
 
@@ -190,21 +190,16 @@ enum Gender {
 
 enum BloodGroup {
   A_POSITIVE
-  A_NEGATIVE
   B_POSITIVE
   O_POSITIVE
-  B_NEGATIVE
   AB_POSITIVE
+  A_NEGATIVE
+  B_NEGATIVE
   O_NEGATIVE
   AB_NEGATIVE
 }
 
 enum MaritalStatus {
-  MARRIED
-  UNMARRIED
-}
-
-enum MaritalStatus2 {
   MARRIED
   UNMARRIED
 }
