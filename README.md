@@ -2,4 +2,5 @@
 
 ## Description
 
-this could be a online doctor doctor where patient is available to meet doctor with video conference 
+this could be a online doctor Protal where patient is available to meet doctor with video conference 
+
